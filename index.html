@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Jobedu - Jordanian Streetwear Brand | Shop Urban Fashion</title>
+    <meta name="description" content="Born from the streets of Amman, Jordan. Jobedu combines contemporary streetwear with authentic Arabic flair. Shop our unique collection today.">
+    <meta name="keywords" content="Jobedu, Jordan streetwear, Arabic fashion, urban wear, Amman fashion, streetwear Jordan">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jobedu - Jordanian Streetwear">
+    <meta property="og:description" content="Bold designs that reflect identity and everyday life">
+    <meta property="og:image" content="images/home-bg.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">JOBEDU</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#shop" class="nav-link">Shop Now</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#collaboration" class="nav-link">Collaboration</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero-section">
+        <div class="hero-background" style="background-image: url('images/home-bg.jpeg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Streetwear inspired by Jordanian culture</h1>
+                <p class="hero-subtitle">Bold designs that reflect identity and everyday life.</p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="section shop-section">
+        <div class="section-background" style="background-image: url('images/shop-bg.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Our Collection</h2>
+                <p class="section-subtitle">Designed in Jordan. Made for everyday wear.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image-wrapper">
+                        <img src="images/product-1.jpeg" alt="Gaza Sun T-shirt" class="product-image" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Gaza Sun T-shirt</h3>
+                        <p class="product-price">32 JOD</p>
+                        <button class="btn btn-add-cart" data-product="Gaza Sun T-shirt" data-price="32">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image-wrapper">
+                        <img src="images/product-2.jpeg" alt="Jobedu Camel Crossing T-shirt" class="product-image" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Jobedu Camel Crossing Basic Cut T-shirt</h3>
+                        <p class="product-price">30 JOD</p>
+                        <button class="btn btn-add-cart" data-product="Jobedu Camel Crossing T-shirt" data-price="30">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image-wrapper">
+                        <img src="images/product-3.jpeg" alt="Black Edition Jacket" class="product-image" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Edition Jacket</h3>
+                        <p class="product-price">25 JOD</p>
+                        <button class="btn btn-add-cart" data-product="Black Edition Jacket" data-price="25">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image-wrapper">
+                        <img src="images/product-4.jpeg" alt="Palestine Hoodie" class="product-image" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Palestine Hoodie</h3>
+                        <p class="product-price">25 JOD</p>
+                        <button class="btn btn-add-cart" data-product="Palestine Hoodie" data-price="25">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image-wrapper">
+                        <img src="images/product-5.jpeg" alt="Symbolic Peace T-shirt" class="product-image" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="btn-quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Symbolic T-shirt Representing Peace</h3>
+                        <p class="product-price">23 JOD</p>
+                        <button class="btn btn-add-cart" data-product="Symbolic Peace T-shirt" data-price="23">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-background" style="background-image: url('images/about-bg.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="about-content fade-in-up">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-text">
+                    <p>Born from the vibrant streets of Amman, Jordan, Jobedu embodies the spirit of urban culture with a distinct fusion of contemporary fashion and authentic Arabic flair. Every stitch, every design, and every slogan is a testament to the raw energy and diversity found in the bustling streets of our region.</p>
+                    <p>From the bustling souks to the concrete jungles of modern metropolises, Jobedu's streetwear serves as a canvas for cultural exchange and artistic expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section id="collaboration" class="section collaboration-section">
+        <div class="section-background" style="background-image: url('images/collab-bg.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="collaboration-content fade-in-up">
+                <h2 class="section-title">Collaboration with Jokers</h2>
+                <div class="collaboration-text">
+                    <p>Jobedu has collaborated with Jokers to create unique streetwear pieces that combine creative design with cultural inspiration. This collaboration reflects Jobedu's commitment to working with local partners to produce meaningful fashion.</p>
+                    <p class="collaboration-highlight">A unique collection combining our signature designs with their creative vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-background" style="background-image: url('images/contact-bg.jpeg');"></div>
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in-up">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+96265933595">+962 6 593 3595</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:hello@jobedu.com">hello@jobedu.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-facebook"></i>
+                            <a href="https://facebook.com/JobeduJordan" target="_blank" rel="noopener noreferrer">facebook.com/JobeduJordan</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://facebook.com/JobeduJordan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper fade-in-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jobedu. Born from the streets of Amman, Jordan.</p>
+            <p>Bold designs that reflect identity and everyday life.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <i class="fas fa-check-circle"></i>
+        <span>Item added to cart!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

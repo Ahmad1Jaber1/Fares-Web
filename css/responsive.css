@@ -1,0 +1,422 @@
+/* ====================================
+   Responsive CSS - Mobile First Approach
+   ==================================== */
+
+/* ====================================
+   Mobile Devices (Default - up to 479px)
+   ==================================== */
+
+/* Navigation adjustments for mobile */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        padding: 100px var(--space-lg) var(--space-lg);
+        gap: var(--space-lg);
+        transition: right var(--transition-normal);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-link::after {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+}
+
+/* ====================================
+   Small Phones (min-width: 480px)
+   ==================================== */
+@media (min-width: 480px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .hero-title {
+        font-size: clamp(2.75rem, 5vw, 4rem);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* ====================================
+   Tablets (min-width: 768px)
+   ==================================== */
+@media (min-width: 768px) {
+    /* Navigation returns to horizontal */
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        width: auto;
+    }
+
+    .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 80%;
+    }
+
+    /* Section padding increases */
+    .section {
+        padding: var(--space-xl) 0;
+    }
+
+    /* Products grid - 2 columns */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    /* Contact wrapper stays single column on tablet */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Hero buttons side by side */
+    .hero-buttons {
+        flex-direction: row;
+    }
+}
+
+/* ====================================
+   Desktop (min-width: 1024px)
+   ==================================== */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    /* Products grid - 3 columns */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact wrapper - 2 columns */
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    /* Increase section spacing */
+    .section {
+        padding: 8rem 0;
+    }
+
+    /* About and Collaboration content */
+    .about-content,
+    .collaboration-content {
+        max-width: 1000px;
+    }
+
+    .about-text p,
+    .collaboration-text p {
+        font-size: 1.125rem;
+    }
+}
+
+/* ====================================
+   Large Desktop (min-width: 1440px)
+   ==================================== */
+@media (min-width: 1440px) {
+    /* Products grid - 4 columns for very large screens */
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Maximum widths for readability */
+    .hero-content {
+        max-width: 1100px;
+    }
+
+    .about-content,
+    .collaboration-content {
+        max-width: 1200px;
+    }
+
+    /* Increase font sizes for large screens */
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* ====================================
+   Extra Large Desktop (min-width: 1920px)
+   ==================================== */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    /* Products grid - 5 columns */
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ====================================
+   Mobile Specific Adjustments
+   ==================================== */
+@media (max-width: 767px) {
+    /* Hero section */
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .btn {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Products grid - 1 column on mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    /* Contact wrapper - stacked */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: var(--space-md);
+    }
+
+    /* Social links */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer p {
+        font-size: 0.875rem;
+    }
+
+    /* Cart notification */
+    .cart-notification {
+        right: var(--space-sm);
+        left: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.875rem;
+    }
+}
+
+/* ====================================
+   Landscape Orientation (Mobile)
+   ==================================== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .section {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+    }
+
+    .hero-section {
+        min-height: 100vh;
+    }
+}
+
+/* ====================================
+   Tablet Landscape
+   ==================================== */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ====================================
+   Print Styles
+   ==================================== */
+@media print {
+    .navbar,
+    .mobile-menu-toggle,
+    .cart-notification,
+    .btn {
+        display: none;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* ====================================
+   Accessibility - Reduced Motion
+   ==================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ====================================
+   High Contrast Mode
+   ==================================== */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        border: 2px solid var(--primary-black);
+    }
+
+    .nav-link::after {
+        height: 3px;
+    }
+
+    .product-card {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* ====================================
+   Dark Mode Support (System Preference)
+   ==================================== */
+@media (prefers-color-scheme: dark) {
+    /* Already dark by default, but can add overrides if needed */
+}
+
+/* ====================================
+   Touch Device Optimizations
+   ==================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 48px;
+        min-width: 48px;
+    }
+
+    .nav-link {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .social-link {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .product-overlay {
+        opacity: 0;
+    }
+
+    .product-card:active .product-overlay {
+        opacity: 1;
+    }
+}
+
+/* ====================================
+   Very Small Devices (max-width: 320px)
+   ==================================== */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    .contact-item {
+        font-size: 0.95rem;
+    }
+
+    .contact-item i {
+        font-size: 1.25rem;
+        width: 30px;
+    }
+}
